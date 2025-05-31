@@ -43,3 +43,24 @@ section {
   border-radius: 20px;
   box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
 }
+.background-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.background-blur::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.25), transparent 70%);
+  border-radius: 50%;
+  filter: blur(100px);
+  transition: transform 0.2s ease;
+}
