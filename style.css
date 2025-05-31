@@ -56,4 +56,8 @@ section {
   z-index: 0;
   overflow: hidden;
 }
+.background-blur div {
+  position: absolute;
+  pointer-events: none;
+}
 
