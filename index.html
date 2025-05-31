@@ -30,6 +30,31 @@
     <footer>
       <p>© 2025 – Guilhem</p>
     </footer>
+  </div>    <footer>
+      <p>© 2025 – Guilhem</p>
+    </footer>
   </div>
+
+  <script>
+    const blurLayer = document.querySelector(".background-blur");
+
+    document.addEventListener("mousemove", (e) => {
+      blurLayer.innerHTML = `<div style="
+        position:absolute;
+        left:${e.clientX - 200}px;
+        top:${e.clientY - 200}px;
+        width:400px;
+        height:400px;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.25), transparent 70%);
+        border-radius: 50%;
+        filter: blur(100px);
+        transition: transform 0.2s ease;
+      "></div>`;
+    });
+  </script>
+
+</body>
+</html>
+
 </body>
 </html>
